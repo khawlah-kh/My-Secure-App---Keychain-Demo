@@ -84,6 +84,7 @@
 		BB55F828266061EE007F939B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				908242C62848DD04001D16C5 /* KeychainSrorage.swift */,
 				BB73C2C7265F638C00434BF1 /* APIService.swift */,
 				BB051FD0266066490015DDB8 /* UIApplication+Extension.swift */,
 			);
@@ -117,7 +118,6 @@
 				BB90CEA9265EDA18002BB79E /* Assets.xcassets */,
 				BB90CEAE265EDA18002BB79E /* Info.plist */,
 				BB90CEAB265EDA18002BB79E /* Preview Content */,
-				908242C62848DD04001D16C5 /* KeychainSrorage.swift */,
 			);
 			path = "My Secure App";
 			sourceTree = "<group>";

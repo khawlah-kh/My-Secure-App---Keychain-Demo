@@ -54,7 +54,10 @@ struct Login: View {
                         authViewModel.requestBiometricUnlock { result in
                             switch result{
                             case .success(let credintials):
-                                loginViewModel.credentials = credintials
+                                DispatchQueue.main.async {
+                                    loginViewModel.credentials = credintials
+                                }
+                                
                                 loginViewModel.login { success in
                                     authViewModel.updateIsAuthentication(success: success)
                                 }
@@ -68,7 +71,7 @@ struct Login: View {
                             .scaledToFit()
                             .frame(width: 50, height: 50)
                     }
-  
+                    
                 }
                 
                 
@@ -90,9 +93,9 @@ struct Login: View {
                 }),secondaryButton:.cancel())
             }
             else{
-               return Alert(title: Text("Invalid Login"), message: Text(error.localizedDescription))
+                return Alert(title: Text("Invalid Login"), message: Text(error.localizedDescription))
             }
-           
+            
         }
     }
 }
